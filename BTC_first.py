@@ -1,5 +1,4 @@
 print('libraries')
-from pandas.core.tools.datetimes import Scaler
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
