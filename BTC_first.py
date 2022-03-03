@@ -68,7 +68,7 @@ total_dataset = pd.concat((data['Close'], test_data['Close']), axis=0)
 
 model_inputs = total_dataset[len(total_dataset) - len(test_data) - prediction_days:].values
 model_inputs = model_inputs.reshape(-1, 1)
-model_inputs = Scaler.fit_transform(model_inputs)
+model_inputs = scaler.fit_transform(model_inputs)
 
 x_test = []
 
