@@ -19,12 +19,11 @@ data = web.DataReader(f'{crypto_currency}-{against_currency}', 'yahoo', start, e
 
 #prepare data
 
-
 scaler = MinMaxScaler(feature_range=(0,1))
 scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
 prediction_days = 60
-future_day = 30
+future_day = 1
 
 x_train, y_train = [], []
 
@@ -38,7 +37,6 @@ x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
   
 
 #create model
-
 
 model = Sequential()
 
